@@ -48,7 +48,14 @@ rightBut.addEventListener("click", function() {
 })
 resetBut.addEventListener("click", function(){
     console.log ("reset button clicked");
-    resetValue +=1;
+ 
+
+    if (leftGoal.innerHTML < rightGoal.innerHTML){
+        alert("Team 2 Wins!!")
+    } else {
+        alert("Team 1 Wins!!")
+    }
+       resetValue +=1;
     resetCount.innerHTML= resetValue; 
     leftPoint= 0;
     leftGoal.innerHTML=leftPoint
@@ -58,5 +65,4 @@ resetBut.addEventListener("click", function(){
     rightGoal.innerHTML=rightPoint
     rightValue= 0;
     rightShot.innerHTML=rightValue
-    
 })
